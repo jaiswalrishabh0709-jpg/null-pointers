@@ -5,30 +5,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Support Hub</title>
+<title>Mood Check-In</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-
 <link rel="stylesheet" href="styles.css">
 
 </head>
 
-<body class="bg-gradient-to-br from-indigo-100 via-purple-100 to-blue-100 min-h-screen">
+<body class="bg-gradient-to-br from-purple-100 via-indigo-100 to-blue-100 min-h-screen">
 
 <!-- NAVBAR -->
 
-<header class="backdrop-blur-lg bg-white/70 shadow-md sticky top-0">
+<header class="backdrop-blur-lg bg-white/70 shadow-md">
 
 <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-<h1 class="text-xl font-bold text-indigo-600">
+<h1 class="font-bold text-indigo-600 text-lg">
 🌿 Student Support Hub
 </h1>
 
-<nav class="space-x-6 font-medium">
+<nav class="space-x-6">
 
 <a href="index.html" class="hover:text-indigo-600">Home</a>
-<a href="checkin.html" class="hover:text-indigo-600">Mood Check</a>
+<a href="checkin.html" class="text-indigo-600 font-semibold">Mood Check</a>
 <a href="wall.html" class="hover:text-indigo-600">Positivity Wall</a>
 
 </nav>
@@ -37,169 +36,81 @@
 
 </header>
 
+<!-- MAIN -->
 
-<!-- HERO SECTION -->
+<section class="py-20 px-6 text-center">
 
-<section class="text-center px-6 py-20">
-
-<h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-
-Support shouldn't take an appointment  
-<br>
-
-<span class="text-indigo-600">
-it should take one tap
-</span>
-
+<h2 class="text-4xl font-bold text-gray-800 mb-4">
+Daily Emotional Check-In
 </h2>
 
-<p class="mt-6 text-gray-600 max-w-xl mx-auto text-lg">
-
-A calm digital space designed to help students manage stress,
-reflect on their emotions, and support each other.
-
+<p class="text-gray-600 mb-12 max-w-xl mx-auto">
+Take 10 seconds to check in with yourself.  
+Understanding your emotions is the first step to managing stress.
 </p>
 
-</section>
+<!-- GLASS CARD -->
 
+<div class="max-w-xl mx-auto glass-card p-10">
 
-<!-- FLOATING CALMING ELEMENTS -->
-
-<div class="floating-shape shape1"></div>
-<div class="floating-shape shape2"></div>
-<div class="floating-shape shape3"></div>
-
-
-
-<!-- STRESS BUTTON SECTION -->
-
-<section class="text-center py-10">
-
-<h3 class="text-2xl font-semibold mb-6 text-gray-700">
-
-Feeling overwhelmed right now?
-
+<h3 class="text-lg font-semibold mb-6 text-gray-700">
+How are you feeling today?
 </h3>
 
-<p class="text-gray-500 mb-8">
-Tap the button for a quick 60-second mental reset
-</p>
+<!-- EMOJI SELECT -->
+
+<div class="flex justify-center gap-8 text-4xl mb-8">
+
+<button class="emojiBtn hover:scale-125 transition">😊</button>
+<button class="emojiBtn hover:scale-125 transition">😐</button>
+<button class="emojiBtn hover:scale-125 transition">😞</button>
+<button class="emojiBtn hover:scale-125 transition">😫</button>
+
+</div>
+
+<!-- STRESS LEVEL -->
+
+<label class="block text-gray-600 mb-3">
+Stress Level
+</label>
+
+<input
+id="stressLevel"
+type="range"
+min="1"
+max="10"
+class="w-full accent-indigo-500">
+
+<div class="flex justify-between text-sm text-gray-500 mt-2">
+<span>Calm</span>
+<span>Overwhelmed</span>
+</div>
+
+<!-- SAVE BUTTON -->
 
 <button
-id="stressBtn"
-class="pulse-button bg-gradient-to-r from-pink-500 to-red-500 text-white px-10 py-5 rounded-full text-lg shadow-xl hover:scale-110 transition">
+id="saveMood"
+class="mt-8 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-full shadow-lg hover:scale-105 transition">
 
-🧘 Stress Reset
+Save My Check-In
+<!--RESULT MESSAGE-->
+<div id="resultMessage" class="mt-6 text-indigo-700 font-semibold"></div>
 
 </button>
 
-</section>
-
-
-
-<!-- FEATURES SECTION -->
-
-<section class="py-16 px-6">
-
-<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-
-<!-- Feature 1 -->
-
-<div class="feature-card">
-
-<div class="text-4xl mb-3">🧘</div>
-
-<h3 class="font-semibold text-lg mb-2">
-Instant Stress Reset
-</h3>
-
-<p class="text-gray-600 text-sm">
-Take a 60-second breathing break to calm your mind during exams or stressful moments.
+<p class="text-sm text-gray-500 mt-6">
+Your check-in is private and stored only on your device.
 </p>
-
-</div>
-
-
-<!-- Feature 2 -->
-
-<div class="feature-card">
-
-<div class="text-4xl mb-3">😊</div>
-
-<h3 class="font-semibold text-lg mb-2">
-Daily Mood Check-In
-</h3>
-
-<p class="text-gray-600 text-sm">
-Track your emotions in 10 seconds and discover patterns before burnout happens.
-</p>
-
-</div>
-
-
-<!-- Feature 3 -->
-
-<div class="feature-card">
-
-<div class="text-4xl mb-3">💬</div>
-
-<h3 class="font-semibold text-lg mb-2">
-Positivity Wall
-</h3>
-
-<p class="text-gray-600 text-sm">
-Students anonymously share supportive messages and encouragement.
-</p>
-
-</div>
 
 </div>
 
 </section>
 
+<footer class="text-center text-gray-500 pb-10">
 
-
-<!-- RESET MODAL -->
-
-<div id="resetModal"
-class="hidden fixed inset-0 bg-black/40 flex items-center justify-center">
-
-<div class="bg-white p-8 rounded-2xl text-center shadow-2xl max-w-sm">
-
-<h3 class="text-xl font-semibold mb-4 text-indigo-600">
-60-Second Reset
-</h3>
-
-<div class="breathing-circle"></div>
-
-<p id="resetMessage" class="mt-4 text-gray-600">
-Breathe slowly... inhale and exhale.
-</p>
-
-<p id="timer" class="text-indigo-600 text-xl font-bold mt-3">
-60
-</p>
-
-<button id="closeReset"
-class="mt-6 text-gray-500 hover:text-gray-800">
-
-Close
-
-</button>
-
-</div>
-
-</div>
-
-
-<!-- FOOTER -->
-
-<footer class="text-center text-gray-500 py-10">
-
-“Support shouldn’t take an appointment — it should take one tap.”
+Small check-ins today can prevent burnout tomorrow.
 
 </footer>
-
 
 <script src="script.js"></script>
 
