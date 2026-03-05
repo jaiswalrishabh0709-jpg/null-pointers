@@ -1,52 +1,207 @@
-## Slide Title: Standout Features (Hackathon Differentiators)
+<!DOCTYPE html>
+<html lang="en">
 
-### 1. Stress Button – Instant Relief
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-A **one-tap “Stress Button”** students can press when feeling overwhelmed.
-It immediately opens a **60-second reset routine**:
+<title>Student Support Hub</title>
 
-* Breathing animation
-* Quick grounding exercise
-* Short motivational message
+<script src="https://cdn.tailwindcss.com"></script>
 
-Helps students **calm down instantly during stressful moments** (exams, deadlines, presentations).
+<link rel="stylesheet" href="styles.css">
 
----
+</head>
 
-### 2. Daily Emotional Check-In
+<body class="bg-gradient-to-br from-indigo-100 via-purple-100 to-blue-100 min-h-screen">
 
-A **10-second mood tracker** where students select:
+<!-- NAVBAR -->
 
-* Mood emoji 😊😐😞😫
-* Stress level
+<header class="backdrop-blur-lg bg-white/70 shadow-md sticky top-0">
 
-The system shows **weekly mood patterns**, helping students **recognize stress trends before burnout occurs**.
+<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
----
+<h1 class="text-xl font-bold text-indigo-600">
+🌿 Student Support Hub
+</h1>
 
-### 3. Anonymous Positivity Wall
+<nav class="space-x-6 font-medium">
 
-Students can **share short anonymous supportive messages** like:
+<a href="index.html" class="hover:text-indigo-600">Home</a>
+<a href="checkin.html" class="hover:text-indigo-600">Mood Check</a>
+<a href="wall.html" class="hover:text-indigo-600">Positivity Wall</a>
 
-* “You’re not alone.”
-* “Take a deep breath, you got this.”
-* “One step at a time.”
+</nav>
 
-Creates a **peer-driven positive environment without revealing identity**.
+</div>
 
----
+</header>
 
-### Key Differentiator
 
-**A simple, private, and instant micro-support platform designed specifically for students who need help but hesitate to ask for it.**
+<!-- HERO SECTION -->
 
----
+<section class="text-center px-6 py-20">
 
-💡 **Tip for judges:**
-End the slide with this line:
+<h2 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
 
-> “Support shouldn’t take an appointment — it should take one tap.”
+Support shouldn't take an appointment  
+<br>
 
----
+<span class="text-indigo-600">
+it should take one tap
+</span>
 
-If you'd like, I can also give a **complete 8–10 slide hackathon PPT structure that flows perfectly and impresses judges.**
+</h2>
+
+<p class="mt-6 text-gray-600 max-w-xl mx-auto text-lg">
+
+A calm digital space designed to help students manage stress,
+reflect on their emotions, and support each other.
+
+</p>
+
+</section>
+
+
+<!-- FLOATING CALMING ELEMENTS -->
+
+<div class="floating-shape shape1"></div>
+<div class="floating-shape shape2"></div>
+<div class="floating-shape shape3"></div>
+
+
+
+<!-- STRESS BUTTON SECTION -->
+
+<section class="text-center py-10">
+
+<h3 class="text-2xl font-semibold mb-6 text-gray-700">
+
+Feeling overwhelmed right now?
+
+</h3>
+
+<p class="text-gray-500 mb-8">
+Tap the button for a quick 60-second mental reset
+</p>
+
+<button
+id="stressBtn"
+class="pulse-button bg-gradient-to-r from-pink-500 to-red-500 text-white px-10 py-5 rounded-full text-lg shadow-xl hover:scale-110 transition">
+
+🧘 Stress Reset
+
+</button>
+
+</section>
+
+
+
+<!-- FEATURES SECTION -->
+
+<section class="py-16 px-6">
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
+<!-- Feature 1 -->
+
+<div class="feature-card">
+
+<div class="text-4xl mb-3">🧘</div>
+
+<h3 class="font-semibold text-lg mb-2">
+Instant Stress Reset
+</h3>
+
+<p class="text-gray-600 text-sm">
+Take a 60-second breathing break to calm your mind during exams or stressful moments.
+</p>
+
+</div>
+
+
+<!-- Feature 2 -->
+
+<div class="feature-card">
+
+<div class="text-4xl mb-3">😊</div>
+
+<h3 class="font-semibold text-lg mb-2">
+Daily Mood Check-In
+</h3>
+
+<p class="text-gray-600 text-sm">
+Track your emotions in 10 seconds and discover patterns before burnout happens.
+</p>
+
+</div>
+
+
+<!-- Feature 3 -->
+
+<div class="feature-card">
+
+<div class="text-4xl mb-3">💬</div>
+
+<h3 class="font-semibold text-lg mb-2">
+Positivity Wall
+</h3>
+
+<p class="text-gray-600 text-sm">
+Students anonymously share supportive messages and encouragement.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- RESET MODAL -->
+
+<div id="resetModal"
+class="hidden fixed inset-0 bg-black/40 flex items-center justify-center">
+
+<div class="bg-white p-8 rounded-2xl text-center shadow-2xl max-w-sm">
+
+<h3 class="text-xl font-semibold mb-4 text-indigo-600">
+60-Second Reset
+</h3>
+
+<div class="breathing-circle"></div>
+
+<p id="resetMessage" class="mt-4 text-gray-600">
+Breathe slowly... inhale and exhale.
+</p>
+
+<p id="timer" class="text-indigo-600 text-xl font-bold mt-3">
+60
+</p>
+
+<button id="closeReset"
+class="mt-6 text-gray-500 hover:text-gray-800">
+
+Close
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="text-center text-gray-500 py-10">
+
+“Support shouldn’t take an appointment — it should take one tap.”
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
